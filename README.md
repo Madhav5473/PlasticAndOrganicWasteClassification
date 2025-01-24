@@ -7,6 +7,11 @@ This repository contains the code and resources for a deep learning project aime
 
 ## **Project Overview**
 
+## **Dataset Link**
+
+https://www.kaggle.com/datasets/techsash/waste-classification-data/data
+
+
 ### **Objective**
 
 The goal of this project is to:
