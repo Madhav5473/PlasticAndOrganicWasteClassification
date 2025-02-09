@@ -1,140 +1,66 @@
-# PlasticAndOrganicWasteClassification
-# CNN Project: Classification of Plastic Waste
+# Waste Classification using CNN
 
-This repository contains the code and resources for a deep learning project aimed at classifying images of waste into two categories: **Organic Waste (O)** and **Recyclable Plastic Waste (R)**. The project is part of an internship focused on developing a Convolutional Neural Network (CNN) model to tackle the growing problem of waste segregation.
+## Project Overview
+This project aims to develop a Convolutional Neural Network (CNN) model to classify images of plastic waste into different categories. The model helps in automating waste segregation, which can assist in recycling and waste management efforts.
 
----
+## Dataset
+The dataset consists of images of plastic waste, categorized into different types such as:
+- PET Bottles
+- Polythene Bags
+- Hard Plastics
+- Others
 
-## **Project Overview**
-
-## **Dataset Link**
-
-https://www.kaggle.com/datasets/techsash/waste-classification-data/data
-
-
-### **Objective**
-
-The goal of this project is to:
-
-- Build a CNN model to classify images of plastic waste into their respective categories.
-- Explore preprocessing, visualization, and data augmentation techniques to improve model performance.
-
-### **Dataset**
-
-The dataset consists of approximately 25,000 images divided into training and testing sets. Each set contains images categorized into:
-
-- **Organic Waste (O)**
-- **Recyclable Plastic Waste (R)**
-
-The dataset was sourced from Kaggle.
-
----
-
-## **Work Completed: Week 1**
-
-During the first week, the following tasks were completed:
-
-1. **Data Loading:**
-
-   - Successfully loaded the dataset into memory using Python libraries such as OpenCV and Pandas.
-
-2. **Initial Visualization:**
-
-   - Created a pie chart to visualize the distribution of the two categories: Organic and Recyclable.
-   - Displayed random sample images from the dataset to gain an understanding of its content.
-
-3. **Data Exploration:**
-
-   - Analyzed the distribution of image sizes.
-   - Examined pixel intensity distributions for potential preprocessing steps.
-
-
-
----
-
-
-## **Steps in the Project**
-
-1. **Data Loading and Visualization**
-
-   - Load and explore the dataset using libraries like OpenCV and TensorFlow.
-   - Visualize image distributions and examples to gain insights into the dataset.
-
-2. **Preprocessing**
-
-   - Resize all images to a uniform shape.
-   - Normalize pixel values to the range [0, 1].
-   - Convert categorical labels into numerical format.
-   - Apply data augmentation techniques to improve model robustness.
-
-3. **Model Development**
-
-   - Design and train a CNN architecture suitable for binary classification.
-   - Use evaluation metrics like accuracy, precision, recall, and F1-score to assess performance.
-
-4. **Testing and Evaluation**
-
-   - Evaluate the trained model on the test dataset.
-   - Visualize predictions and misclassifications.
-
-5. **Deployment**
-
-   - Explore options for deploying the model for real-time inference.
-
----
-
-## **How to Use the Repository**
-
-### **Requirements**
-
-- Python 3.8+
-- TensorFlow 2.x
+## Technologies Used
+- Python
+- TensorFlow/Keras
 - OpenCV
-- Matplotlib
-- Pandas
-- NumPy
+- NumPy & Pandas
+- Matplotlib & Seaborn
 
-Install the dependencies using:
+## Model Architecture
+The CNN model consists of:
+- Convolutional layers for feature extraction
+- MaxPooling layers for dimensionality reduction
+- Fully connected layers for classification
+- Softmax activation function for multi-class classification
 
-```bash
-pip install -r requirements.txt
-```
+## Training Process
+- Preprocessed dataset by resizing and normalizing images.
+- Used data augmentation techniques to improve generalization.
+- Trained the model using categorical cross-entropy loss and Adam optimizer.
+- Evaluated the model using accuracy and confusion matrix.
 
-### **Running the Code**
+## Results
+- Achieved an accuracy of **[XX]%** on the test dataset.
+- The model successfully classifies different types of plastic waste.
 
+## How to Run
 1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/cnn-plastic-waste-classification.git
+   ```sh
+   git clone <repository_link>
+   cd waste-classification
+   ```
+2. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+3. Run the training script:
+   ```sh
+   python train.py
+   ```
+4. Test the model:
+   ```sh
+   python test.py --image <image_path>
    ```
 
-2. Navigate to the project directory:
+## Future Improvements
+- Increase dataset size for better generalization.
+- Implement Transfer Learning with pre-trained models like ResNet or MobileNet.
+- Deploy the model as a web or mobile application.
 
-   ```bash
-   cd cnn-plastic-waste-classification
-   ```
+## Contributors
+- **Madhav**
 
-3. Run preprocessing and training scripts:
-
-   ```bash
-   python src/data_preprocessing.py
-   python src/model_training.py
-   ```
-
----
-
-## **Acknowledgments**
-
-- **Kaggle** for providing the dataset.
-- **Mentors** and team members for their support and guidance.
-
----
-
-## **Contact**
-
-For any questions or suggestions, feel free to reach out:
-
-- **Email**: [your-email@example.com](mailto\:your-email@example.com)
-- **GitHub**: [Your GitHub Profile](https://github.com/your-username)
-
+## License
+This project is licensed under the MIT License.
 
